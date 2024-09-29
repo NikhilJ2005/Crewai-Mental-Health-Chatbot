@@ -1,0 +1,9 @@
+#Now if you face any issues during hosting in streamlit cloud here are some suggested measures:
+1) add this module 
+Add pysqlite3-binary to your requirements.txt
+Add below lines to the top of your python file.
+import pysqlite3
+import sys
+sys.modules[‘sqlite3’] = sys.modules.pop(‘pysqlite3’)
+#Now this should work
+If any persisting issue remains then pls raise an issue.
